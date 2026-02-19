@@ -36,7 +36,7 @@ Database
 - MySQL
 
 Tools
-- VS Code / STS / IntelliJ
+- VS Code / STS / Eclipse
 - Git & GitHub
 
 ---
