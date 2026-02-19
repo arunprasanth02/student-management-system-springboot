@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Students</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-4">
+    <h2>Student List</h2>
+
+    <a href="/students/new" class="btn btn-success mb-3">Add Student</a>
+
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Location</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.srollno}"></td>
+            <td th:text="${student.sname}"></td>
+            <td th:text="${student.email}"></td>
+            <td th:text="${student.location}"></td>
+            <td>
+                <a th:href="@{/students/edit/{id}(id=${student.srollno})}"
+                   class="btn btn-primary btn-sm">Edit</a>
+
+                <a th:href="@{/students/delete/{id}(id=${student.srollno})}"
+                   class="btn btn-danger btn-sm"
+                   onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
