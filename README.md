@@ -50,8 +50,3 @@ Tools
 - MVC Architecture
 - Database Integration
 - Clean UI using Bootstrap
-
----
-
-## Project Structure
-
